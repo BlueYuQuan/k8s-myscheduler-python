@@ -50,13 +50,13 @@ def main():
     pods_list = get_pods(API_SERVER + API_URL["pods"])
     nodes_list = get_nodes(API_SERVER + API_URL["nodes"])
     if pods_list == []:
-        print("There is no pod need to be scheduled.")
+        print("There is no pod need to be scheduled!")
         return True
 
     for pod in pods_list:
         chosen = chose_node(nodes_list)
         if chosen == None:
-            print("There is no node be chosen.")
+            print("There is no node be chosen!")
             return True
 
         data = {"apiVersion": "v1",
