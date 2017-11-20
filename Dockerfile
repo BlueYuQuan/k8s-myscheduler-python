@@ -7,6 +7,8 @@
 FROM registry.cn-hangzhou.aliyuncs.com/sjq-study/python:2.7
 #维护者
 MAINTAINER 441452752@qq.com
+#安装pip
+RUN apt-get install python-pip
 #将当前目录下的文件全部复制到基础镜像的/usr/src/myapp目录下
 COPY . /usr/src/myapp
 #为后续的RUN,CMD,ENTRYPOINT指令配置工作目录
